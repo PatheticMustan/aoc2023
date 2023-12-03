@@ -25,7 +25,7 @@ x.split("\n").map((line, index, original) => {
             symbolLines.map(symbolLine => {
                 symbolSearch += symbolLine.slice(Math.max(lastIndex+start-1, 0), Math.min(lastIndex+end+1, symbolLine.length));
             });
-            if (symbolSearch.search(/[*=@%-&/#+$]+/) !== -1) sum += +match[0];
+            if (symbolSearch.search(/[*=@%\-&/#+$]+/) !== -1) sum += +match[0];
             lastIndex += end;
         } else {
             break;
