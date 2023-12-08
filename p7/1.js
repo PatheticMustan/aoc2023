@@ -79,6 +79,6 @@ const valueCards = x.map(line => {
 });
 
 valueCards
-    .sort((a, b) => a[0] - b[0], 0)
+    .sort((a, b) => a[0] - b[0])
     .map(([_, bid], i) => bid*(i+1))
     .reduce((a, b) => a + b, 0);
