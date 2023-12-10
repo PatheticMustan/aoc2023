@@ -1,5 +1,8 @@
+// example usage:
+// node generateTable 5
+
 // assumes all the files exist... otherwise they'll 404, i guess
-const days = 8;
+const days = +(process.argv[2]) || 1;
 
 let topRow =  "| Solutions |";
 let divider = "| --------- |";
