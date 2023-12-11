@@ -17,7 +17,7 @@ for (let table=0; table<Math.ceil(days/tableSize); table++) {
 
         // this looks yucky but i swear it makes the generated code look nice
         topRow  += ` [Day ${i}](${lf("README.md")}) |`;
-        divider += ` -----------------------${"-".repeat((i>9)? 2 : 0)} |`
+        divider += ` -${"-".repeat((i>9)? 24 : 22)} |`;
         partOne += ` [D${i}P1](${lf("1.js")})       |`;
         partTwo += ` [D${i}P2](${lf("2.js")})       |`;
     }
