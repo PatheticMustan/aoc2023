@@ -31,7 +31,7 @@ For part 2, I stared at the example pattern a little more to find a pattern. How
 
 Starting from the bottom, we can work out the next value by doing `rowAbove[0] - row[0]`, until we get to the first row.
 
-```
+```text
 2 - 0 = 2
 0 - 2 = -2
 3 - (-2) = 5
