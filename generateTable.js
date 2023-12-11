@@ -15,10 +15,11 @@ for (let table=0; table<Math.ceil(days/tableSize); table++) {
     for (let i=(table*tableSize+1); i<=Math.min((table+1)*tableSize,days); i++) {
         const lf = f => `./p${i}/${f}`;
 
-        topRow += ` [Day ${i}](${lf("README.md")}) |`;
-        divider += " --------- |"
-        partOne += ` [D${i}P1](${lf("1.js")}) |`;
-        partTwo += ` [D${i}P2](${lf("2.js")}) |`;
+        // this looks yucky but i swear it makes the generated code look nice
+        topRow  += ` [Day ${i}](${lf("README.md")}) |`;
+        divider += ` -----------------------${"-".repeat((i>9)? 2 : 0)} |`
+        partOne += ` [D${i}P1](${lf("1.js")})       |`;
+        partTwo += ` [D${i}P2](${lf("2.js")})       |`;
     }
 
     output.push([topRow, divider, partOne, partTwo].join("\n"));
